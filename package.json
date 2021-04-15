@@ -38,7 +38,7 @@
   },
   "husky": {
     "hooks": {
-      "post-commit": "exec < 'sssssssssssssssss'"
+      "pre-commit": "echo 'sssssssssssssss'"
     }
   }
 }
