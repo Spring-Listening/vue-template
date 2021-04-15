@@ -4782,6 +4782,11 @@
   "resolved" "https://registry.npm.taobao.org/human-signals/download/human-signals-1.1.1.tgz"
   "version" "1.1.1"
 
+"husky@^6.0.0":
+  "integrity" "sha1-gQ8RhprfUWBMMupXftvDd9f5MZ4="
+  "resolved" "https://registry.npm.taobao.org/husky/download/husky-6.0.0.tgz"
+  "version" "6.0.0"
+
 "iconv-lite@^0.4.24", "iconv-lite@0.4.24":
   "integrity" "sha1-ICK0sl+93CHS9SSXSkdKr+czkIs="
   "resolved" "https://registry.npm.taobao.org/iconv-lite/download/iconv-lite-0.4.24.tgz?cache=0&sync_timestamp=1594184264130&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ficonv-lite%2Fdownload%2Ficonv-lite-0.4.24.tgz"
