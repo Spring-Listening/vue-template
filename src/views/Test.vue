@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-04-07 00:38:04
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-07 19:43:26
+ * @LastEditTime: 2021-04-15 14:46:27
 -->
 <template>
   <div class="test-container">ssssss{{ name }} ==== {{ age }}</div>
@@ -37,3 +37,8 @@ export default defineComponent({
   }
 })
 </script>
+<style lang="scss">
+.test-container {
+  color: $primary;
+}
+</style>

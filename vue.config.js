@@ -4,10 +4,17 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-04-07 18:04:24
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-08 10:49:11
+ * @LastEditTime: 2021-04-15 14:55:05
  */
 const path = require('path')
 module.exports = {
+  css: {
+    loaderOptions: {
+      scss: {
+        prependData: `@import '~@/theme/index.scss';`
+      }
+    }
+  },
   publicPath: '/',
   // chainWebpack: config => {
   //   config.resolve.alias
