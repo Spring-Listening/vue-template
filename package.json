@@ -8,7 +8,8 @@
     "build:test": "vue-cli-service build --mode test",
     "lint": "vue-cli-service lint",
     "fix": "vue-cli-service lint --fix",
-    "bpage": "node ./auto-build-page/newPage.js"
+    "bpage": "node ./auto-build-page/newPage.js",
+    "precommit": "npm run lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -34,10 +35,5 @@
     "sass-loader": "^8.0.2",
     "shelljs": "^0.8.4",
     "vue-loader-v16": "*"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo \"git commit trigger husky pre-commit hook\" "
-    }
   }
 }
