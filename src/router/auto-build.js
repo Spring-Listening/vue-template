@@ -16,6 +16,11 @@ const aotoRoutes = [
     path: '/nba',
     name: 'nba',
     component: () => import('@/views/Happy/nba.vue')
+  },
+  {
+    path: '/city',
+    name: 'city',
+    component: () => import('@/views/Happy/city.vue')
   } // last line route append
 ]
 
