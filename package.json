@@ -8,7 +8,6 @@
     "build:test": "vue-cli-service build --mode test",
     "lint": "vue-cli-service lint",
     "fix": "vue-cli-service lint --fix",
-    "precommit": "npm run lint",
     "bpage": "node ./auto-build-page/newPage.js"
   },
   "dependencies": {
