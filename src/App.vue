@@ -4,60 +4,26 @@
  * @Author: zoucw (326359613@qq.com)
  * @Date: 2021-03-02 19:01:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-07 16:02:58
+ * @LastEditTime: 2021-04-17 16:24:03
 -->
 <template>
-  <router-view />
-  <div @click="handleClick(1, $event)">按钮</div>
-  <div>{{ a }}====={{ b }}</div>
-  <Test :data="a"></Test>
+  <router-view v-slot="{ Component }">
+    <keep-alive>
+      <component :is="Component" username="spring" />
+    </keep-alive>
+  </router-view>
 </template>
 <script>
-import {
-  onBeforeMount,
-  onMounted,
-  onUnmounted,
-  reactive,
-  toRefs,
-  defineComponent
-} from 'vue'
-import { useRouter } from 'vue-router'
-import Test from '@/views/Test.vue'
+import { defineComponent } from 'vue'
 export default defineComponent({
   name: 'App',
-  components: {
-    Test
-  },
+  components: {},
   data() {
     return {
       invoke: 'spring'
     }
   },
-  setup(props, ctx) {
-    console.log('222', ctx)
-    console.log(ctx.root)
-    let router = useRouter()
-    let handleClick = () => {
-      router.push('/about')
-    }
-    const data = reactive({
-      a: 1,
-      b: 2
-    })
-    onBeforeMount(() => {
-      console.log('beforeMounted')
-    })
-    onMounted(() => {
-      console.log('mounted')
-    })
-    onUnmounted(() => {
-      console.log('onUnmounted')
-    })
-    return {
-      handleClick,
-      ...toRefs(data)
-    }
-  }
+  setup() {}
 })
 </script>
 <style lang="scss">

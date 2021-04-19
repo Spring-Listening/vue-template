@@ -4,24 +4,10 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-04-13 15:44:12
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-13 15:46:10
+ * @LastEditTime: 2021-04-16 19:36:26
  */
 const aotoRoutes = [
-  {
-    path: '/papge',
-    name: 'papge',
-    component: () => import('@/views/Happy/papge.vue')
-  },
-  {
-    path: '/nba',
-    name: 'nba',
-    component: () => import('@/views/Happy/nba.vue')
-  },
-  {
-    path: '/city',
-    name: 'city',
-    component: () => import('@/views/Happy/city.vue')
-  } // last line route append
+  // last line route append
 ]
 
 export default aotoRoutes
