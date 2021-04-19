@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-03-02 19:01:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-17 18:06:18
+ * @LastEditTime: 2021-04-19 20:18:33
  */
 module.exports = {
   root: true,
@@ -18,6 +18,7 @@ module.exports = {
   rules: {
     semi: 0,
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'max-len': ['error', { code: 200, ignoreStrings: true }]
   }
 }

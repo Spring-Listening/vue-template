@@ -4,16 +4,9 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-04-12 11:09:25
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-13 15:47:15
+ * @LastEditTime: 2021-04-19 20:25:03
  */
-/*
- * @Descripttion:
- * @version:
- * @Author: chunwen (chunwen.zou@caibeitv.com)
- * @Date: 2021-04-10 18:59:18
- * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-10 19:16:41
- */
+
 const chalk = require('chalk')
 const path = require('path')
 const fs = require('fs')
@@ -23,6 +16,8 @@ const successLog = message => console.log(chalk.blue(`${message}`))
 const errorLog = error => console.log(chalk.red(`${error}`))
 // 导入模板
 const { vueTemplate } = require('./template')
+// 首字母大写
+const toUpper = str => `${str.substr(0, 1)}${str.slice(1)}`
 // 生成文件
 const generateFile = (path, data) => {
   if (fs.existsSync(path)) {
@@ -49,18 +44,23 @@ const getFile = filePath => {
     return false
   }
 }
-const generateRoute = (path, filename) => {
-  const content = `},
-  {
-    path: '/${filename}',
+const generateRoute = (path, currentPath, filename) => {
+  const content = `{
+    path: '/${currentPath}',
     name: '${filename}',
-    component: () => import('@${path.split('/src')[1]}')
-  } // last line route append`
+    component: () => import(/* webpackChunkName: '${toUpper(filename)}' */ '@${
+    path.split('/src')[1]
+  }')
+  },
+  { mark: 'this line not delete' }`
   const routerPath = resolve(__dirname, '../src/router/auto-build.js')
   return new Promise((resolve, reject) => {
     try {
       let routeText = getFile(routerPath)
-      const text = routeText.replace(`} // last line route append`, content)
+      const text = routeText.replace(
+        `{ mark: 'this line not delete' }`,
+        content
+      )
       fs.writeFileSync(routerPath, text)
       log('路由插入成功')
       resolve(true)
@@ -77,6 +77,10 @@ process.stdin.on('data', async chunk => {
     .trim()
     .toString()
   // Vue页面组件路径 可根据实际情况修改
+  const currentPath = inputName
+    .split('/')
+    .join('-')
+    .toLowerCase()
   const pathArr = inputName.split('/')
   const filename = pathArr.pop() || 'index'
   const compath = pathArr.join('/')
@@ -108,7 +112,7 @@ process.stdin.on('data', async chunk => {
     // log(`正在生成 entry 文件 ${entryFile}`)
     // await generateFile(entryFile, entryTemplate(componentName))
     log(`正在生成路由`)
-    await generateRoute(vueFile, filename)
+    await generateRoute(vueFile, currentPath, filename)
     successLog('生成成功')
   } catch (e) {
     errorLog(e.message)
