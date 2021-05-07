@@ -13,6 +13,11 @@ const aotoRoutes = [
     component: () =>
       import(/* webpackChunkName: 'index' */ '@/views/Classify/index.vue')
   },
+  {
+    path: '/classify-scroll',
+    name: 'scroll',
+    component: () => import(/* webpackChunkName: 'scroll' */ '@/views/Classify/scroll.vue')
+  },
   { mark: 'this line not delete' }
 ]
 export default aotoRoutes

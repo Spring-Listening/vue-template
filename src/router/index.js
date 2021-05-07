@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-03-02 19:01:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-19 20:30:25
+ * @LastEditTime: 2021-04-29 14:45:16
  */
 import { createRouter, createWebHistory } from 'vue-router'
 import aotoRoutes from './auto-build'
@@ -23,7 +23,8 @@ const routes = [
     path: '/about',
     name: 'About',
     component: () => import(/* webpackChunkName: "About" */ '@/views/About')
-  }
+  },
+  { path: '/', redirect: { name: 'Home' } }
 ]
 
 const router = createRouter({
