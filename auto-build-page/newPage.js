@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-04-12 11:09:25
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-19 20:25:03
+ * @LastEditTime: 2021-05-08 20:40:57
  */
 
 const chalk = require('chalk')
@@ -52,15 +52,12 @@ const generateRoute = (path, currentPath, filename) => {
     path.split('/src')[1]
   }')
   },
-  { mark: 'this line not delete' }`
+  { path: '/example' }`
   const routerPath = resolve(__dirname, '../src/router/auto-build.js')
   return new Promise((resolve, reject) => {
     try {
       let routeText = getFile(routerPath)
-      const text = routeText.replace(
-        `{ mark: 'this line not delete' }`,
-        content
-      )
+      const text = routeText.replace(`{ path: '/example' }`, content)
       fs.writeFileSync(routerPath, text)
       log('路由插入成功')
       resolve(true)
