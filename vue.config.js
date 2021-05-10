@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-04-07 18:04:24
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-15 14:55:05
+ * @LastEditTime: 2021-05-08 20:52:38
  */
 const path = require('path')
 module.exports = {
@@ -16,12 +16,6 @@ module.exports = {
     }
   },
   publicPath: '/',
-  // chainWebpack: config => {
-  //   config.resolve.alias
-  //     .set('@', path.join(__dirname, 'src'))
-  //     .set('@assets', path.join(__dirname, 'src/assets'))
-  //     .set('components', path.join(__dirname, 'src/components'))
-  // },
   configureWebpack: {
     resolve: {
       extensions: ['.js', '.vue', '.json', '.ts', '.tsx'],
@@ -33,6 +27,7 @@ module.exports = {
     // plugins: [new WebpackBundleAnalyzerPlugin()]
   },
   devServer: {
+    historyApiFallback: true,
     proxy: {
       '/api': {
         target: 'http://localhost:8888',
