@@ -22,4 +22,4 @@ jobs:
       with:
         branch: gh-pages
         folder: dist
-        ssh-key: ${{ secrets.ACCESS_TOKEN }}
+        # ssh-key: ${{ secrets.ACCESS_TOKEN }}
