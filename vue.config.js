@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-04-07 18:04:24
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-09-24 15:33:37
+ * @LastEditTime: 2021-09-27 10:22:13
  */
 const path = require('path')
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
       }
     }
   },
-  publicPath: './',
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
   configureWebpack: {
     resolve: {
       extensions: ['.js', '.vue', '.json', '.ts', '.tsx'],

@@ -4,9 +4,9 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-03-02 19:01:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-04-29 14:45:16
+ * @LastEditTime: 2021-09-27 10:17:02
  */
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import aotoRoutes from './auto-build'
 const routes = [
   ...aotoRoutes, // 自动生成的页面的路径
@@ -28,7 +28,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes: routes
 })
 /** 理由守卫 */
