@@ -16,7 +16,7 @@ module.exports = {
       }
     }
   },
-  publicPath: process.env.NODE_ENV === 'production' ? '.' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/vue-template/' : '/',
   configureWebpack: {
     resolve: {
       extensions: ['.js', '.vue', '.json', '.ts', '.tsx'],
