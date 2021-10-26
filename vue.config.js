@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-04-07 18:04:24
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2021-10-26 14:42:00
+ * @LastEditTime: 2021-10-26 14:59:10
  */
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
@@ -16,7 +16,7 @@ module.exports = {
       }
     }
   },
-  publicPath: process.env.NODE_ENV === 'production' ? '/vue-template/' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '.' : '/',
   configureWebpack: {
     resolve: {
       extensions: ['.js', '.vue', '.json', '.ts', '.tsx'],
