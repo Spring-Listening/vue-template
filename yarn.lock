@@ -819,7 +819,7 @@
     "@babel/types" "^7.4.4"
     "esutils" "^2.0.2"
 
-"@babel/runtime@^7.11.0", "@babel/runtime@^7.8.4":
+"@babel/runtime@^7.10.5", "@babel/runtime@^7.11.0", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4":
   "integrity" "sha1-l9viEW4mMMSJ8i4GVt7NYKqh/O4="
   "resolved" "https://registry.npm.taobao.org/@babel/runtime/download/@babel/runtime-7.13.9.tgz?cache=0&sync_timestamp=1614635224492&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fruntime%2Fdownload%2F%40babel%2Fruntime-7.13.9.tgz"
   "version" "7.13.9"
@@ -4861,6 +4861,13 @@
   dependencies:
     "resolve-from" "^3.0.0"
 
+"import-html-entry@^1.9.0":
+  "integrity" "sha1-PYxZd5Jr3RIquOZYllwQIGi0r40="
+  "resolved" "https://registry.npm.taobao.org/import-html-entry/download/import-html-entry-1.11.1.tgz"
+  "version" "1.11.1"
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+
 "import-local@^2.0.0":
   "integrity" "sha1-VQcL44pZk88Y72236WH1vuXFoJ0="
   "resolved" "https://registry.npm.taobao.org/import-local/download/import-local-2.0.0.tgz"
@@ -7281,6 +7288,17 @@
   "resolved" "https://registry.npm.taobao.org/q/download/q-1.5.1.tgz?cache=0&sync_timestamp=1589682817412&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fq%2Fdownload%2Fq-1.5.1.tgz"
   "version" "1.5.1"
 
+"qiankun@^2.5.1":
+  "integrity" "sha1-G4QPNwyNF1/6AyrccLALpdLQ9Ps="
+  "resolved" "https://registry.npmmirror.com/qiankun/download/qiankun-2.5.1.tgz"
+  "version" "2.5.1"
+  dependencies:
+    "@babel/runtime" "^7.10.5"
+    "import-html-entry" "^1.9.0"
+    "lodash" "^4.17.11"
+    "single-spa" "^5.9.2"
+    "tslib" "^1.10.0"
+
 "qs@~6.5.2":
   "integrity" "sha1-yzroBuh0BERYTvFUzo7pjUA/PjY="
   "resolved" "https://registry.npm.taobao.org/qs/download/qs-6.5.2.tgz?cache=0&sync_timestamp=1610598235973&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fqs%2Fdownload%2Fqs-6.5.2.tgz"
@@ -7963,6 +7981,11 @@
   "version" "0.2.2"
   dependencies:
     "is-arrayish" "^0.3.1"
+
+"single-spa@^5.9.2":
+  "integrity" "sha1-LRUcuzsnNimlsnswo7jKhH3LpMU="
+  "resolved" "https://registry.nlark.com/single-spa/download/single-spa-5.9.3.tgz"
+  "version" "5.9.3"
 
 "slash@^1.0.0":
   "integrity" "sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU="
@@ -8676,7 +8699,7 @@
   "resolved" "https://registry.npm.taobao.org/ts-pnp/download/ts-pnp-1.2.0.tgz"
   "version" "1.2.0"
 
-"tslib@^1.9.0":
+"tslib@^1.10.0", "tslib@^1.9.0":
   "integrity" "sha1-zy04vcNKE0vK8QkcQfZhni9nLQA="
   "resolved" "https://registry.npm.taobao.org/tslib/download/tslib-1.14.1.tgz?cache=0&sync_timestamp=1609887539329&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Ftslib%2Fdownload%2Ftslib-1.14.1.tgz"
   "version" "1.14.1"
