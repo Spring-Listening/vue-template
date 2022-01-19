@@ -23,7 +23,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory('/projectA/'),
+  history: createWebHistory('/vue-template'),
   routes: routes
 })
 /** 理由守卫 */
