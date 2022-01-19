@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-03-02 19:01:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-01-19 22:41:48
+ * @LastEditTime: 2022-01-19 22:44:50
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
 import aotoRoutes from './auto-build'
