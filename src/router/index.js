@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-03-02 19:01:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-01-21 18:26:24
+ * @LastEditTime: 2022-02-07 15:12:12
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
 import aotoRoutes from './auto-build'
@@ -37,7 +37,7 @@ const routes = [
       auth: true
     },
     component: () =>
-      import(/* webpackChunkName: "Home" */ '@/views/Moveable.vue')
+      import(/* webpackChunkName: "Home" */ '@/views/Move/Moveable.vue')
   },
   { path: '/', redirect: { name: 'Home' } }
 ]
