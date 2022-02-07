@@ -4,7 +4,7 @@
  * @Author: chunwen (chunwen.zou@caibeitv.com)
  * @Date: 2021-03-02 19:01:36
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-01-19 22:44:50
+ * @LastEditTime: 2022-01-21 18:26:24
  */
 import { createRouter, createWebHashHistory } from 'vue-router'
 import aotoRoutes from './auto-build'
@@ -18,6 +18,26 @@ const routes = [
       auth: true
     },
     component: () => import(/* webpackChunkName: "Home" */ '@/views/Home')
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    meta: {
+      title: 'welcome',
+      auth: true
+    },
+    component: () => import(/* webpackChunkName: "Home" */ '@/views/Test.vue')
+  },
+
+  {
+    path: '/move',
+    name: 'Move',
+    meta: {
+      title: 'welcome',
+      auth: true
+    },
+    component: () =>
+      import(/* webpackChunkName: "Home" */ '@/views/Moveable.vue')
   },
   { path: '/', redirect: { name: 'Home' } }
 ]
